@@ -191,27 +191,8 @@ def theMainFunction():
     if ins in ['?', 'h', 'help']:
         print('''pix2tex help:
 
-Usage:
-On Windows and macOS you can copy the image into memory and just press ENTER to get a prediction.
-Alternatively you can paste the image file path here and submit.
 
-You might get a different prediction every time you submit the same image. If the result you got was close you
-can just predict the same image by pressing ENTER again. If that still does not work you can change the temperature
-or you have to take another picture with another resolution (e.g. zoom out and take a screenshot with lower resolution). 
-
-Press "x" to close the program.
-You can interrupt the model if it takes too long by pressing Ctrl+C.
-
-Visualization:
-You can either render the code into a png using XeLaTeX (see README) to get an image file back.
-This is slow and requires a working installation of XeLaTeX. To activate type 'show' or set the flag --show
-Alternatively you can render the expression in the browser using katex.org. Type 'katex' or set --katex
-
-Settings:
-to toggle one of these settings: 'show', 'katex', 'no_resize' just type it into the console
-Change the temperature (default=0.333) type: "t=0.XX" to set a new temperature.
-            ''')
-      #  continue
+  
 
     elif ins in ['show', 'katex', 'no_resize']:
         setattr(args, ins, not getattr(args, ins, False))
